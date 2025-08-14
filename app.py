@@ -17,7 +17,7 @@ st.set_page_config(
 # -----------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("C:/Users/admin/Desktop/Ganeeth/ML_school_testing_clean.csv")
+    df = pd.read_csv("ML_school_testing_clean.csv")
     # Add derived metrics
     df['BMI_Category'] = pd.cut(df['BMI'], bins=[0, 18.5, 25, 30, 100],
                                 labels=['Underweight', 'Normal', 'Overweight', 'Obese'])
@@ -228,4 +228,5 @@ with tab4:
 # Footer
 # -----------------------------
 st.markdown("---")
+
 st.markdown("🔍 *Movement Lab — Fitness Intelligence for Young Athletes* | Data last updated: Aug 2025")
